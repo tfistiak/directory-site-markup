@@ -57,3 +57,7 @@ code {
 blockquote > p {
   @apply my-0 #{!important};
 }
+
+a{
+  @apply hover:text-theme-light transition duration-300;
+}

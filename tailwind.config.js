@@ -61,7 +61,7 @@ module.exports = {
         "h3-sm": h3 * 0.9 + "rem",
         h4: h4 + "rem",
         h5: h5 + "rem",
-        h6: h6 + "rem",
+        h6: font_base + "px",
       },
       fontFamily: {
         primary: [fontPrimary, fontPrimaryType],

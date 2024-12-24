@@ -6,7 +6,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "gulp dev",
+    "dev": "gulp dev --no-cache",
     "build": "gulp build",
     "deploy": "gulp deploy",
     "format": "prettier -w ./src",

@@ -12,7 +12,8 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .header {
-  @apply bg-body py-6;
+  @apply bg-body py-4 lg:py-2 ;
+  filter: drop-shadow(0px 9px 50px rgba(0, 0, 0, 0.44));
 }
 
 // navbar items
@@ -36,7 +37,7 @@ input#nav-toggle:checked ~ #nav-menu {
 // }
 
 .nav-link {
-  @apply text-light hover:text-primary   block p-3 font-semibold transition lg:px-2 lg:py-3;
+  @apply text-light hover:text-theme-light   block p-3 font-medium transition lg:px-2 lg:py-3;
 }
 
 .nav-dropdown {
@@ -52,7 +53,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-dropdown-link {
-  @apply block py-1 font-semibold text-light transition hover:text-primary;
+  @apply block py-1 font-semibold text-light transition hover:text-theme-light;
 }
 
 //theme-switcher
