@@ -37,7 +37,7 @@ input#nav-toggle:checked ~ #nav-menu {
 // }
 
 .nav-link {
-  @apply text-light hover:text-theme-light   block p-3 font-medium transition lg:px-2 lg:py-3;
+  @apply text-light hover:text-theme-light   block p-3 font-medium transition lg:px-2 lg:py-3 text-sm;
 }
 
 .nav-dropdown {
