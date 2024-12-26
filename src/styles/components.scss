@@ -26,7 +26,7 @@
   li {
     @apply inline-block;
     a {
-      @apply flex h-6 w-6 items-center justify-center rounded-full bg-light text-center leading-9 text-dark hover:bg-primary  transition-all duration-300 hover:text-light;
+      @apply flex h-7 w-7 items-center justify-center rounded-full bg-light text-center leading-9 text-dark hover:bg-primary  transition-all duration-300 hover:text-light;
       svg {
         @apply h-2 w-2;
       }
@@ -171,4 +171,9 @@
   @apply prose-th:relative prose-th:z-10 prose-th:px-4 prose-th:py-[18px] prose-th:text-dark;
   @apply prose-tr:border-border;
   @apply prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:py-[18px];
+}
+
+// badge
+.badge {
+  @apply bg-dark/60 text-white rounded-full h-6 w-6 flex justify-center items-center text-xs;
 }
