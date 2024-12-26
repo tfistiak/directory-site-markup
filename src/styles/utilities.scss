@@ -18,3 +18,14 @@
 .shadow {
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
 }
+.bg-navy{
+  background-color: #13182B;
+}
+
+.text-gradient{
+ background: linear-gradient(261.44deg, #BF87F3 9.79%, #FF9CBB 88.13%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}

@@ -177,3 +177,15 @@
 .badge {
   @apply bg-dark/60 text-white rounded-full h-6 w-6 flex justify-center items-center text-xs;
 }
+
+// swith toggle
+
+.switch input:checked + .slider:before {
+  transform: translateX(1rem);
+}
+.slider:before {
+  content: "";
+  @apply absolute inline-block h-5 w-5 rounded-full bg-theme-light transition-all duration-200;
+  left: 0.25rem;
+  top: 0.125rem;
+}

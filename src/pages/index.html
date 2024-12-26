@@ -1,4 +1,4 @@
-<!-- Banner -->
+<!-- Start Banner Section -->
 <section class="relative min-h-[600px] py-16">
   <img
     src="images/grid-shap.png"
@@ -21,20 +21,126 @@
         </p>
       </div>
       <div class="flex gap-4 flex-wrap justify-center items-center mt-14">
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Discover <span class="badge">11</span> </button>
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Blog <span class="badge">11</span> </button>
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Ducumentation <span class="badge">11</span> </button>
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Business <span class="badge">11</span> </button>
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Agency <span class="badge">11</span> </button>
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Sass <span class="badge">11</span> </button>
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Starer <span class="badge">11</span> </button>
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Portfolio <span class="badge">11</span> </button>
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Ecommerce <span class="badge">11</span> </button>
-        <button class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2">Others <span class="badge">11</span> </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Discover <span class="badge">11</span>
+        </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Blog <span class="badge">11</span>
+        </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Ducumentation <span class="badge">11</span>
+        </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Business <span class="badge">11</span>
+        </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Agency <span class="badge">11</span>
+        </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Sass <span class="badge">11</span>
+        </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Starer <span class="badge">11</span>
+        </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Portfolio <span class="badge">11</span>
+        </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Ecommerce <span class="badge">11</span>
+        </button>
+        <button
+          class="btn btn-primary rounded-full px-3 flex justify-center items-center gap-2"
+        >
+          Others <span class="badge">11</span>
+        </button>
       </div>
     </div>
   </div>
 </section>
-<!-- /Banner -->
+<!-- End Banner Section -->
+
+<!-- Start Themes Section -->
+<div class="section">
+  <div class="container">
+    <div
+      class="flex justify-between items-center border-b border-b-border pb-6"
+    >
+      <h4
+        class="text-sm font-normal uppercase bg-theme-light py-1 px-3 rounded-full text-dark"
+      >
+        All Themes
+      </h4>
+
+      <!-- swith theme -->
+      <div class="flex items-center">
+        <span class="text-sm font-normal uppercase">Free</span>
+        <!-- switch toggle -->
+        <label
+          class="switch relative inline-block w-11 select-none transition duration-200 ease-in mb-5 mx-5"
+        >
+          <input
+            type="checkbox"
+            class="toggle-checkbox absolute hidden w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+          />
+          <span
+            class="slider absolute block w-11 h-6 rounded-full bg-primary transition-all duration-200 cursor-pointer"
+          ></span>
+        </label>
+        <span class="text-sm font-normal uppercase">Premium</span>
+      </div>
+    </div>
+    <div class="row mt-7 gap-y-7">
+      <div class="sm:col-6 lg:col-4">
+       <!-- card  -->
+       @@include('components/theme-card.html', {themeImage: "theme-1.png", name:"Dino Framer Template", avatar:"card-avatar.png"})
+        <!-- card  -->
+      </div>
+      <div class="sm:col-6 lg:col-4">
+       <!-- card  -->
+       @@include('components/theme-card.html', {themeImage: "theme-2.png", name:"Attain Framer Template",avatar:"card-avatar.png"})
+        <!-- card  -->
+      </div>
+      <div class="sm:col-6 lg:col-4">
+       <!-- card  -->
+       @@include('components/theme-card.html', {themeImage: "theme-3.png", name:"Darkrise Nextjs Template", avatar:"card-avatar.png"})
+        <!-- card  -->
+      </div>
+      <div class="sm:col-6 lg:col-4">
+       <!-- card  -->
+       @@include('components/theme-card.html', {themeImage: "theme-1.png", name:"Dino Framer Template", avatar:"card-avatar.png"})
+        <!-- card  -->
+      </div>
+      <div class="sm:col-6 lg:col-4">
+       <!-- card  -->
+       @@include('components/theme-card.html', {themeImage: "theme-2.png", name:"Attain Framer Template",avatar:"card-avatar.png"})
+        <!-- card  -->
+      </div>
+      <div class="sm:col-6 lg:col-4">
+       <!-- card  -->
+       @@include('components/theme-card.html', {themeImage: "theme-3.png", name:"Darkrise Nextjs Template", avatar:"card-avatar.png"})
+        <!-- card  -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Themes Section -->
 
 @@include('call-to-action.html')
