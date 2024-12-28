@@ -1,3 +1,4 @@
+
 (function () {
   "use strict";
 
@@ -137,7 +138,41 @@
 
 // nav issue 
 window.addEventListener("resize", () => {
+  'use strict';
   if (window.innerWidth > 1024) {
     document.querySelector("#nav-menu").classList.add("lg:!flex");
   }
 });
+
+// ============ project gallery ==========
+const galleryImages = [
+  "/images/theme-details-1.png",
+  "/images/theme-details-2.png",
+  "/images/theme-details-3.png",
+  "/images/theme-details-4.png",]
+const themeDetailsBannerImg = document.getElementById("theme-details-banner-img");
+
+
+const galleryImageShow = ()=>{
+  const gallery = document.getElementById("gallery");
+  gallery.innerHTML = '';
+  galleryImages.forEach((image, index) => {
+    gallery.innerHTML += ` 
+            <div class="col-3">
+              <img
+                src="${image}"
+                alt="theme talent"
+                class="w-full h-24 sm:h-28 rounded-lg ${themeDetailsBannerImg.src.replace(window.location.origin, '') === image ? 'border-2 border-theme-light transform scale-110' : ''}"
+                onclick="changeBannerImage('${image}')"
+              />
+            </div>`;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", galleryImageShow);
+
+changeBannerImage = (image) => {
+  themeDetailsBannerImg.src = image;
+  galleryImageShow();
+  
+}
