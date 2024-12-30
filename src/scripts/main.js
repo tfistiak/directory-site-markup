@@ -154,19 +154,28 @@ const themeDetailsBannerImg = document.getElementById("theme-details-banner-img"
 
 
 const galleryImageShow = ()=>{
+  themeDetailsBannerImg.classList.remove('rotate-in')
+  themeDetailsBannerImg.classList.add('rotate')
+  
   const gallery = document.getElementById("gallery");
   gallery.innerHTML = "";
-  galleryImages.forEach((image, index) => {
+  galleryImages.forEach((image) => {
     gallery.innerHTML += ` 
             <div class="col-3">
               <img
                 src="${image}"
                 alt="theme talent"
-                class="w-full h-24 sm:h-28 rounded-lg ${themeDetailsBannerImg.src.replace(window.location.origin, '') === image ? 'border-2 border-theme-light transform scale-110' : ''}"
+                class="w-full h-24 sm:h-28 rounded-lg transition-transform duration-300 hover:scale-110 ${themeDetailsBannerImg.src.replace(window.location.origin, '') === image ? 'border-2 border-theme-light transform scale-110' : ''}"
                 onclick="changeBannerImage('${image}')"
               />
             </div>`;
   });
+
+  setTimeout(() => {
+    themeDetailsBannerImg.classList.remove('rotate')
+    themeDetailsBannerImg.classList.add('rotate-in')
+   
+  }, 800);
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -176,8 +185,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
   }
 });
 
-changeBannerImage = (image) => {
-  themeDetailsBannerImg.src = image;
+function changeBannerImage (image) {
+  
   galleryImageShow();
+  themeDetailsBannerImg.src = image;
   
 }
