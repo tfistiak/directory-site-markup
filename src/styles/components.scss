@@ -153,14 +153,14 @@
 // content style
 .content {
   @apply prose max-w-none;
-  @apply prose-headings:mb-[.3em] prose-headings:mt-[.6em] prose-headings:text-dark;
+  @apply prose-headings:mb-[.3em] prose-headings:mt-[.6em] prose-headings:text-light;
   @apply prose-h1:text-h1-sm md:prose-h1:text-h1;
   @apply prose-h2:text-h2-sm md:prose-h2:text-h2;
   @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
   @apply prose-img:max-w-full prose-img:rounded;
   @apply prose-hr:border-border;
   @apply prose-p:text-base prose-p:text-text;
-  @apply prose-blockquote:rounded-lg prose-blockquote:border prose-blockquote:border-l-[10px] prose-blockquote:border-primary prose-blockquote:bg-theme-light prose-blockquote:px-8 prose-blockquote:py-10 prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:text-dark;
+  @apply  prose-blockquote:border-l-[4px] prose-blockquote:border-primary  prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:text-lg prose-blockquote:not-italic prose-blockquote:text-theme-light;
   @apply prose-pre:rounded-lg prose-pre:bg-theme-light;
   @apply prose-code:px-1 prose-code:text-primary;
   @apply prose-strong:text-dark;

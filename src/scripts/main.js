@@ -155,7 +155,7 @@ const themeDetailsBannerImg = document.getElementById("theme-details-banner-img"
 
 const galleryImageShow = ()=>{
   const gallery = document.getElementById("gallery");
-  gallery.innerHTML = '';
+  gallery.innerHTML = "";
   galleryImages.forEach((image, index) => {
     gallery.innerHTML += ` 
             <div class="col-3">
@@ -169,7 +169,12 @@ const galleryImageShow = ()=>{
   });
 }
 
-document.addEventListener("DOMContentLoaded", galleryImageShow);
+document.addEventListener("DOMContentLoaded", ()=>{
+  if(window.location.pathname.includes("theme-details")){
+    galleryImageShow();
+
+  }
+});
 
 changeBannerImage = (image) => {
   themeDetailsBannerImg.src = image;
