@@ -17,7 +17,7 @@ h6 {
 
 h1,
 .h1 {
-  @apply text-h1-sm md:text-h1;
+  @apply text-h2 sm:text-h1-sm md:text-h1;
 }
 
 h2,
@@ -61,3 +61,16 @@ blockquote > p {
 a{
   @apply hover:text-theme-light transition duration-300;
 }
+
+input[type='checkbox'] {
+  @apply appearance-none w-4 h-4 rounded-sm bg-transparent border border-theme-light !text-theme-light   cursor-pointer transition-colors duration-300;
+}
+
+input[type='checkbox']:checked {
+  @apply bg-theme-light  border-theme-light ;
+}
+
+input[type='checkbox']:focus {
+  @apply outline-none ring-0; 
+}
+

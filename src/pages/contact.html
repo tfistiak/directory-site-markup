@@ -1,49 +1,74 @@
-@@include('page-header.html', { "title": "Get in touch", "description": "We’d love to hear from you! Whether you have questions, suggestions, or feedback, our team at Astrothemes.club is here to help." })
+@@include('page-header.html', { "title": "Get in touch", "description": "We’d love to hear from you! Whether you have questions, suggestions, or feedback, our team at Astrothemes club is here to help." })
 
-<section class="section-sm">
+<section class="section-sm pb-0">
   <div class="container">
     <div class="row">
-      <div class="mx-auto md:col-10 lg:col-6">
+      <div class="mx-auto md:col-10 lg:col-7">
         <form action="#" method="POST">
-          <div class="mb-6">
-            <label for="name" class="form-label">
-              Full Name <span class="text-red-500">*</span>
-            </label>
-            <input
-              id="name"
-              name="name"
-              class="form-input"
-              placeholder="John Doe"
-              type="text"
-            />
+          <div class="mb-5 row">
+            <div class="col-6">
+              <label for="name" class="form-label"> Full Name * </label>
+              <input
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="John Doe"
+                type="text"
+              />
+            </div>
+            <div class="col-6">
+              <label for="email" class="form-label"> Working Mail * </label>
+              <input
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="john.doe@email.com"
+                type="email"
+              />
+            </div>
           </div>
-          <div class="mb-6">
-            <label for="email" class="form-label">
-              Working Mail <span class="text-red-500">*</span>
-            </label>
-            <input
-              id="email"
-              name="email"
-              class="form-input"
-              placeholder="john.doe@email.com"
-              type="email"
-            />
-          </div>
-          <div class="mb-6">
-            <label for="message" class="form-label">
-              Anything else? <span class="text-red-500">*</span>
-            </label>
+          <div class="mb-5">
+            <label for="message" class="form-label"> Anything else? * </label>
             <textarea
               id="message"
               name="message"
               class="form-input"
-              placeholder="Message goes here..."
-              rows="8"
+              placeholder="Write message"
+              rows="4"
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+
+          <div class="mb-6">
+            <label for="agree" class="flex items-center gap-2">
+              <input type="checkbox" required id="agree" />
+              <p class="text-light text-sm font-light">You agree to our <a href="/" class="underline">friendly privacy policy.</a></p>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary px-12 py-2.5 rounded-sm">
+            Send
+          </button>
         </form>
+
+        <div class="flex mt-16 border border-border rounded-lg p-4">
+          <div class="w-[50px]">
+            <div class="bg-primary rounded-md size-full flex items-center justify-center">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.5 2.5L11.5 13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22.5 2.5L15.5 22.5L11.5 13.5L2.5 9.5L22.5 2.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+            </div>
+          </div>
+          <div class="ml-4">
+            <h5 class="text-base-sm text-theme-light mb-1 font-light">Our Email</h5>
+            <p class="text-light text-sm font-light">hello@flux.com</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
+@@include('call-to-action.html')
