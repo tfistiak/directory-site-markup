@@ -1,0 +1,69 @@
+<section class="relative min-h-[400px] py-10">
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-body"></div>
+  <img
+    src="images/grid-shap.png"
+    alt="shap"
+    class="size-full absolute top-0 left-0 -z-10 object-cover"
+  />
+  <img
+    src="images/plus-shap.png"
+    alt="shap"
+    class="size-full absolute top-0 left-0 -z-10 object-cover"
+  />
+  <div class="container text-center relative z-10">
+    <div class="row">
+      <div class="sm:col-8 mx-auto flex flex-col justify-center items-center">
+        <img
+          src="images/avatar.png"
+          alt="author"
+          class="w-16 h-16 mx-auto rounded-full mb-5"
+        />
+        <h4 class="mb-1 text-h5">Somrat Sorkar</h4>
+        <p class="sm:text-base leading-8">Explain what your template is about.</p>
+        <button
+          class="btn bg-light text-dark rounded-full px-3 flex justify-center items-center gap-2 mt-5"
+        >
+          Templates <span class="badge">11</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+<div class="container">
+    <div class="row mt-4 gap-y-7">
+        <div class="sm:col-6 lg:col-4">
+         <!-- card  -->
+         @@include('components/theme-card.html', {themeImage: "theme-1.png", name:"Dino Framer Template", avatar:"avatar.png"})
+          <!-- card  -->
+        </div>
+        <div class="sm:col-6 lg:col-4">
+         <!-- card  -->
+         @@include('components/theme-card.html', {themeImage: "theme-2.png", name:"Attain Framer Template",avatar:"avatar.png"})
+          <!-- card  -->
+        </div>
+        <div class="sm:col-6 lg:col-4">
+         <!-- card  -->
+         @@include('components/theme-card.html', {themeImage: "theme-3.png", name:"Social Media Astro Template", avatar:"avatar.png"})
+          <!-- card  -->
+        </div>
+        <div class="sm:col-6 lg:col-4">
+         <!-- card  -->
+         @@include('components/theme-card.html', {themeImage: "theme-4.png", name:"Dino Framer Template", avatar:"avatar.png"})
+          <!-- card  -->
+        </div>
+         <div class="sm:col-6 lg:col-4">
+         <!-- card  -->
+         @@include('components/theme-card.html', {themeImage: "theme-6.png", name:"Darkrise Nextjs Template", avatar:"avatar.png"})
+          <!-- card  -->
+        </div>
+        <div class="sm:col-6 lg:col-4">
+         <!-- card  -->
+         @@include('components/theme-card.html', {themeImage: "theme-5.png", name:"Business Vuejs Template",avatar:"avatar.png"})
+          <!-- card  -->
+        </div>
+       
+      </div>
+</div>
+</section>
