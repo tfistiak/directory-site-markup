@@ -34,69 +34,243 @@
     </div>
   </div>
 </section>
-<div class="section-sm">
+<section class="section-sm pb-0">
   <div class="container">
-    <h5 class="mb-3">Template Image files</h5>
-    <p>You can update highest 5 images in your template</p>
-    <div class="row mt-6 gx-0">
-      <div class="col-8">
-        <div id="image-upload-box" class="image-upload-box w-full h-[400px]">
-          <i class="fa-regular fa-image text-theme-light"></i>
-          <input type="file" id="image-input" accept="image/*" class="hidden" />
-          <span id="remove-image" class="remove-image hidden">&times;</span>
+    <form action="/">
+      <div class="row mt-6 gx-0">
+        <div class="md:col-8 mx-auto mb-6">
+          <h5 class="mb-2">Template Image files</h5>
+          <p>You can update highest 5 images in your template</p>
+        </div>
+        <div class="md:col-8 mx-auto">
+          <div id="image-upload-box" class="image-upload-box w-full h-[250px] sm:h-[400px]">
+            <i class="fa-regular fa-image text-theme-light"></i>
+            <input
+              type="file"
+              id="image-input"
+              accept="image/*"
+              class="hidden"
+              required
+            />
+            <span id="remove-image" class="remove-image hidden">&times;</span>
+          </div>
+        </div>
+        <div class="md:col-8 mx-auto">
+          <div class="row mt-5 gx-2 sm:gx-3">
+            <div class="col-3">
+              <div id="image-upload-box-1" class="image-upload-box h-[80px] sm:h-[120px]">
+                <i class="fa-regular fa-image text-theme-light"></i>
+                <input
+                  type="file"
+                  id="image-input-1"
+                  accept="image/*"
+                  class="hidden"
+                  required
+                />
+             
+              </div>
+            </div>
+            <div class="col-3">
+              <div id="image-upload-box-2" class="image-upload-box h-[80px] sm:h-[120px]">
+                <i class="fa-regular fa-image text-theme-light"></i>
+                <input
+                  type="file"
+                  id="image-input-2"
+                  accept="image/*"
+                  class="hidden"
+                  required
+                />
+               
+              </div>
+            </div>
+            <div class="col-3">
+              <div id="image-upload-box-3" class="image-upload-box h-[80px] sm:h-[120px]">
+                <i class="fa-regular fa-image text-theme-light"></i>
+                <input
+                  type="file"
+                  id="image-input-3"
+                  accept="image/*"
+                  class="hidden"
+                  required
+                />
+               
+              </div>
+            </div>
+            <div class="col-3">
+              <div id="image-upload-box-4" class="image-upload-box h-[80px] sm:h-[120px]">
+                <i class="fa-regular fa-image text-theme-light"></i>
+                <input
+                  type="file"
+                  id="image-input-4"
+                  accept="image/*"
+                  class="hidden"
+                  required
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    <div class="row mt-5 gx-3">
-      <div class="col-2 pl-4">
-        <div id="image-upload-box-1" class="image-upload-box h-[120px]">
-          <i class="fa-regular fa-image text-theme-light"></i>
-          <input
-            type="file"
-            id="image-input-1"
-            accept="image/*"
-            class="hidden"
-          />
-          <span id="remove-image-1" class="remove-image hidden">&times;</span>
+
+      <div class="mt-16 row">
+        <div class="md:col-8 mx-auto mb-7">
+          <h6 class="mb-2 text-lg">Submit your astro template</h6>
+          <p class="text-sm">Explain what your template is about.</p>
+        </div>
+        <div class="md:col-8 mx-auto">
+          <!--1-->
+          <div class="mb-6 row gx-2 sm:gx-3  gy-3">
+            <div class="sm:col-6">
+              <label for="title" class="form-label font-semibold text-base">
+                Template Ttile *
+              </label>
+              <input
+                id="title"
+                name="title"
+                class="form-input"
+                placeholder="Saas Landing Page"
+                type="text"
+                required
+              />
+            </div>
+            <div class="sm:col-6">
+              <label for="price" class="form-label font-semibold text-base">
+                Price *
+              </label>
+              <input
+                id="number"
+                name="price"
+                class="form-input"
+                placeholder="$ 0.00"
+                type="price"
+                required
+              />
+            </div>
+          </div>
+          <!--2-->
+          <div class="mb-6 row gx-2 sm:gx-3  gy-3">
+            <div class="sm:col-6">
+              <label for="title" class="form-label font-semibold text-base">
+                Github *
+              </label>
+              <input
+                id="title"
+                name="title"
+                class="form-input"
+                placeholder="https://github.com"
+                type="text"
+                required
+              />
+            </div>
+            <div class="sm:col-6">
+              <label
+                for="css-framework"
+                class="form-label font-semibold text-base"
+              >
+                CSS Framework *
+              </label>
+              <select
+                id="css-framework"
+                name="css-framework"
+                class="form-input bg-body"
+                required
+              >
+                <option value="" disabled selected>
+                  Select a CSS framework
+                </option>
+                <option value="tailwind">Tailwind CSS</option>
+                <option value="bootstrap">Bootstrap</option>
+                <option value="bulma">Bulma</option>
+                <option value="foundation">Foundation</option>
+                <option value="materialize">Materialize</option>
+              </select>
+            </div>
+          </div>
+          <!--3-->
+          <div class="mb-6 row gx-2 sm:gx-3  gy-3">
+            <div class="sm:col-6">
+              <label for="cms" class="form-label font-semibold text-base">
+                CMS *
+              </label>
+              <select id="cms" name="cms" class="form-input bg-body" required>
+                <option value="" disabled selected>Select CMS</option>
+                <option value="wordpress">WordPress</option>
+                <option value="joomla">Strapi</option>
+                <option value="drupal">Contentful</option>
+                <option value="magento">Magento</option>
+                <option value="shopify">Shopify</option>
+              </select>
+            </div>
+            <div class="sm:col-6">
+              <label for="category" class="form-label font-semibold text-base">
+                Category *
+              </label>
+              <select
+                id="category"
+                name="category"
+                class="form-input bg-body"
+                required
+              >
+                <option value="" disabled selected>Select Category</option>
+                <option value="technology">Technology</option>
+                <option value="health">Health</option>
+                <option value="finance">Finance</option>
+                <option value="education">Education</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="travel">Travel</option>
+              </select>
+            </div>
+          </div>
+          <!--4-->
+          <div class="mb-6 row gx-2 sm:gx-3 gy-3">
+            <div class="sm:col-6">
+              <label for="author" class="form-label font-semibold text-base">
+                Author Name *
+              </label>
+              <input
+                id="author"
+                name="author"
+                class="form-input"
+                placeholder="John Doe"
+                type="text"
+                required
+              />
+            </div>
+            <div class="sm:col-6">
+              <label for="website" class="form-label font-semibold text-base">
+                Website Link *
+              </label>
+              <input
+                id="text"
+                name="website"
+                class="form-input"
+                placeholder="https://www.example.com"
+                type="website"
+                required
+              />
+            </div>
+          </div>
+          <!--5-->
+          <div class="mb-6">
+            <label for="description" class="form-label font-semibold text-base">
+              Product Description? *
+            </label>
+            <textarea
+              id="description"
+              name="description"
+              class="form-input"
+              placeholder="Full description"
+              rows="5"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="md:col-8 mx-auto mt-10">
+          <button class="btn btn-primary btn-lg">Submit Template</button>
         </div>
       </div>
-      <div class="col-2">
-        <div id="image-upload-box-2" class="image-upload-box  h-[120px]">
-          <i class="fa-regular fa-image text-theme-light"></i>
-          <input
-            type="file"
-            id="image-input-2"
-            accept="image/*"
-            class="hidden"
-          />
-          <span id="remove-image-2" class="remove-image hidden">&times;</span>
-        </div>
-      </div>
-      <div class="col-2">
-        <div id="image-upload-box-3" class="image-upload-box  h-[120px]">
-          <i class="fa-regular fa-image text-theme-light"></i>
-          <input
-            type="file"
-            id="image-input-3"
-            accept="image/*"
-            class="hidden"
-          />
-          <span id="remove-image-3" class="remove-image hidden">&times;</span>
-        </div>
-      </div>
-      <div class="col-2 pr-2">
-        <div id="image-upload-box-4" class="image-upload-box  h-[120px]">
-          <i class="fa-regular fa-image text-theme-light"></i>
-          <input
-            type="file"
-            id="image-input-4"
-            accept="image/*"
-            class="hidden"
-          />
-        </div>
-      </div>
-    </div>
-    </div>
+    </form>
   </div>
-</div>
+</section>
 
 @@include('call-to-action.html')

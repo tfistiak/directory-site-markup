@@ -5,6 +5,9 @@
 .btn-sm {
   @apply rounded-sm px-4 py-1.5 text-sm;
 }
+.btn-lg{
+  @apply rounded-full w-full py-3 sm:text-base font-semibold;
+}
 
 .btn-primary {
   @apply border-primary bg-primary  !text-light hover:bg-theme-light hover:!text-primary hover:border-theme-light;
