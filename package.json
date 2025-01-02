@@ -2,7 +2,7 @@
   "name": "Directory Template",
   "version": "3.2.0",
   "description": "Directory Template with TailwindCSS and Gulp",
-  "author": "Zeon Studio",
+  "author": "Themefisher",
   "license": "MIT",
   "type": "module",
   "scripts": {

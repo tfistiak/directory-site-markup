@@ -2,13 +2,16 @@
   <div class="container">
     <div class="row gap-y-8">
       <!-- images -->
-      <div class="lg:col-7">
-        <img
-          src="/images/theme-details-1.png"
-          alt="theme talent"
-          id="theme-details-banner-img"
-          class="w-full h-[700px] rounded-lg object-contain"
-        />
+      <div class="lg:col-7 ">
+        <div class="w-full overflow-hidden cursor-zoom-in" id="zoom-box">
+          <img
+            src="/images/theme-details-1.png"
+            alt="theme talent"
+            id="theme-details-banner-img"
+            class="w-full h-[700px] rounded-lg object-contain"
+          />
+        </div>
+
         <div class="row mt-5 gx-2 sm:gx-3" id="gallery">
           <!-- <div class="col-3">
             <img
@@ -105,7 +108,10 @@
           <ul class="list-disc pl-5 mt-6">
             <li>13 Unique Pages</li>
             <li>100/100 Google PageSpeed Score on Desktop</li>
-            <li>Highly customizable (Color, Font, Menu, Social Links, SEO Meta Tags, etc.)</li>
+            <li>
+              Highly customizable (Color, Font, Menu, Social Links, SEO Meta
+              Tags, etc.)
+            </li>
             <li>Built with Tailwind CSS framework</li>
             <li>Netlify & Vercel setting pre-configured</li>
             <li>Mega Menu</li>
