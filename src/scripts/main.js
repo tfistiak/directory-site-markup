@@ -1,4 +1,3 @@
-
 (function () {
   "use strict";
 
@@ -136,9 +135,9 @@
   });
 })();
 
-// nav issue 
+// nav issue
 window.addEventListener("resize", () => {
-  'use strict';
+  "use strict";
   if (window.innerWidth > 1024) {
     document.querySelector("#nav-menu").classList.add("lg:!flex");
   }
@@ -149,14 +148,16 @@ const galleryImages = [
   "/images/theme-details-1.png",
   "/images/theme-details-2.png",
   "/images/theme-details-3.png",
-  "/images/theme-details-4.png",]
-const themeDetailsBannerImg = document.getElementById("theme-details-banner-img");
+  "/images/theme-details-4.png",
+];
+const themeDetailsBannerImg = document.getElementById(
+  "theme-details-banner-img",
+);
 
+const galleryImageShow = () => {
+  themeDetailsBannerImg.classList.remove("rotate-in");
+  themeDetailsBannerImg.classList.add("rotate");
 
-const galleryImageShow = ()=>{
-  themeDetailsBannerImg.classList.remove('rotate-in')
-  themeDetailsBannerImg.classList.add('rotate')
-  
   const gallery = document.getElementById("gallery");
   gallery.innerHTML = "";
   galleryImages.forEach((image) => {
@@ -165,29 +166,58 @@ const galleryImageShow = ()=>{
               <img
                 src="${image}"
                 alt="theme talent"
-                class="w-full h-24 sm:h-28 rounded-lg transition-transform duration-300 hover:scale-110 ${themeDetailsBannerImg.src.replace(window.location.origin, '') === image ? 'border-2 border-theme-light transform scale-110' : ''}"
+                class="w-full h-24 sm:h-28 rounded-lg transition-transform duration-300 hover:scale-110 ${themeDetailsBannerImg.src.replace(window.location.origin, "") === image ? "border-2 border-theme-light transform scale-110" : ""}"
                 onclick="changeBannerImage('${image}')"
               />
             </div>`;
   });
 
   setTimeout(() => {
-    themeDetailsBannerImg.classList.remove('rotate')
-    themeDetailsBannerImg.classList.add('rotate-in')
-   
+    themeDetailsBannerImg.classList.remove("rotate");
+    themeDetailsBannerImg.classList.add("rotate-in");
   }, 800);
-}
+};
 
-document.addEventListener("DOMContentLoaded", ()=>{
-  if(window.location.pathname.includes("theme-details")){
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname.includes("theme-details")) {
     galleryImageShow();
-
   }
 });
 
-function changeBannerImage (image) {
-  
+function changeBannerImage(image) {
   galleryImageShow();
   themeDetailsBannerImg.src = image;
-  
 }
+
+// ============ image uploader ==========
+function setupImageUploader(boxId, inputId) {
+  const box = document.getElementById(boxId);
+  const input = document.getElementById(inputId);
+
+  box.addEventListener("click", function () {
+    input.click();
+  });
+
+  input.addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = document.createElement("img");
+        img.src = e.target.result;
+       
+        box.innerHTML = "";
+        box.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setupImageUploader("image-upload-box", "image-input");
+  setupImageUploader("image-upload-box-1", "image-input-1");
+  setupImageUploader("image-upload-box-2", "image-input-2");
+  setupImageUploader("image-upload-box-3", "image-input-3");
+  setupImageUploader("image-upload-box-4", "image-input-4");
+});

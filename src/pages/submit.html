@@ -15,7 +15,9 @@
   <div class="container text-center relative z-10">
     <div class="row">
       <div class="sm:col-10 mx-auto">
-        <h1 class="mb-6 text-h3-sm sm:text-h1-sm">Submit your astro template</h1>
+        <h1 class="mb-6 text-h3-sm sm:text-h1-sm">
+          Submit your astro template
+        </h1>
         <p class="text-base-sm sm:text-xl sm:leading-9 font-light">
           "Your submission is highly important to us for enriching our library.
           We are committed to publishing your submitted themes on our site as
@@ -32,5 +34,69 @@
     </div>
   </div>
 </section>
+<div class="section-sm">
+  <div class="container">
+    <h5 class="mb-3">Template Image files</h5>
+    <p>You can update highest 5 images in your template</p>
+    <div class="row mt-6 gx-0">
+      <div class="col-8">
+        <div id="image-upload-box" class="image-upload-box w-full h-[400px]">
+          <i class="fa-regular fa-image text-theme-light"></i>
+          <input type="file" id="image-input" accept="image/*" class="hidden" />
+          <span id="remove-image" class="remove-image hidden">&times;</span>
+        </div>
+      </div>
+    <div class="row mt-5 gx-3">
+      <div class="col-2 pl-4">
+        <div id="image-upload-box-1" class="image-upload-box h-[120px]">
+          <i class="fa-regular fa-image text-theme-light"></i>
+          <input
+            type="file"
+            id="image-input-1"
+            accept="image/*"
+            class="hidden"
+          />
+          <span id="remove-image-1" class="remove-image hidden">&times;</span>
+        </div>
+      </div>
+      <div class="col-2">
+        <div id="image-upload-box-2" class="image-upload-box  h-[120px]">
+          <i class="fa-regular fa-image text-theme-light"></i>
+          <input
+            type="file"
+            id="image-input-2"
+            accept="image/*"
+            class="hidden"
+          />
+          <span id="remove-image-2" class="remove-image hidden">&times;</span>
+        </div>
+      </div>
+      <div class="col-2">
+        <div id="image-upload-box-3" class="image-upload-box  h-[120px]">
+          <i class="fa-regular fa-image text-theme-light"></i>
+          <input
+            type="file"
+            id="image-input-3"
+            accept="image/*"
+            class="hidden"
+          />
+          <span id="remove-image-3" class="remove-image hidden">&times;</span>
+        </div>
+      </div>
+      <div class="col-2 pr-2">
+        <div id="image-upload-box-4" class="image-upload-box  h-[120px]">
+          <i class="fa-regular fa-image text-theme-light"></i>
+          <input
+            type="file"
+            id="image-input-4"
+            accept="image/*"
+            class="hidden"
+          />
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
 
 @@include('call-to-action.html')

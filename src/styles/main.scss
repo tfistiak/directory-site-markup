@@ -16,3 +16,10 @@
 @layer utilities {
   @include meta.load-css("utilities");
 }
+.image-upload-box {
+    @apply  border-2 border-border rounded-md flex items-center justify-center relative cursor-pointer;
+}
+
+.image-upload-box img {
+    @apply max-w-full max-h-full;
+}
